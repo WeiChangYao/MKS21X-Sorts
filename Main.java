@@ -1,23 +1,3 @@
-public class Sorts{
-  public static void selectionSort(int [] ary){
-    for (int j = 0; j < ary.length - 1; j++){  //-1 because you dont need to sort last number
-      int min = ary[j];                    //starting number
-      int minIndex = j;                    //index for swapping later
-      for (int i = j; i < ary.length; i++){//going through the array to get smallest number, starting from j
-        if (min > ary[i]){
-          min = ary[i];                    //if it's less, it becomes the new min
-          minIndex = i;
-        }
-      int swap = ary[j];                   //put original number into new thing
-      ary[minIndex] = swap;
-      ary[j] = min;                        //smallest number is in index j
-      }
-    }
-  }
-
-
-
-
 public static String printArray(int[] ary) {
     String output = "[";
     for(int i=0; i<ary.length-1; i++) {
@@ -33,7 +13,7 @@ public static void main(String[] args) {
     String sorted = "";
 
     // 8 nums, [0:10]
-    int[] test_a = { 2, 1, 3};
+    int[] test_a = { 3, 4, 7, 1, 6, 2, 8, 6 };
     System.out.println(printArray(test_a));               // [3, 4, 7, 1, 6, 2, 8, 6]
 
     selectionSort(test_a);
@@ -123,11 +103,3 @@ public static void main(String[] args) {
     }
 
   }
-
-
-
-
-
-}
-         
-  
