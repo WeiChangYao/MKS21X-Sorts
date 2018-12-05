@@ -16,7 +16,7 @@ public class Sorts{
   }
 
 
-public static String printArray(int[] ary) {
+/*public static String printArray(int[] ary) {  
     String output = "[";
     for(int i=0; i<ary.length-1; i++) {
       output += ary[i] + ", ";
@@ -24,12 +24,15 @@ public static String printArray(int[] ary) {
     return output += ary[ary.length-1] + "]";
 }
 
-public static void main(String[] args) {
-  int[] a = { 2, 1, 2};
-  System.out.println(printArray(a));
-  selectionSort(a);
-  System.out.println(printArray(a));
-}
+public static void main(String[] args) {     //tests things in terminal
+  int [] a = new int [args.length];          //add things into array a
+  for (int i = 0; i < a.length; i++){
+    a[i] = Integer.parseInt(args[i]);
+  }
+  System.out.println(printArray(a));         
+  selectionSort(a);                          //sorts array a
+  System.out.println(printArray(a));         //prints it
+}*/
 
 
 
