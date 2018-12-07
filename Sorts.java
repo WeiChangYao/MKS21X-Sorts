@@ -15,6 +15,17 @@ public class Sorts{
     }
   }
 
+  public static void bubbleSortHelper(int[] ary){//this is part of the bubble sort
+    for (int j = 0; j < ary.length-1; j++){//goes through array
+      if (ary [j] > ary [j+1]){            //to find if something's larger
+        int swap = ary[j];                 //saves orignial number
+        ary[j] = ary[j+1];                 //puts new number in original's place
+        ary[j+1] = swap;                   //puts original number in new num's place
+      }
+    }
+  }
+      
+
 
 /*public static String printArray(int[] ary) {  
     String output = "[";
