@@ -24,26 +24,17 @@ public class Sorts{
       }
     }
   }
+  public static void insertionSort(int[] ary){
+    for (int i = 1; i < ary.length; i++){
+      int swap = ary[i];
+      for (int j = i; j == 0; j--){
+        if (swap < ary[j-1]){
+          //move it
+        
+      
       
 
 
-/*public static String printArray(int[] ary) {  
-    String output = "[";
-    for(int i=0; i<ary.length-1; i++) {
-      output += ary[i] + ", ";
-    }
-    return output += ary[ary.length-1] + "]";
-}
-
-public static void main(String[] args) {     //tests things in terminal
-  int [] a = new int [args.length];          //add things into array a
-  for (int i = 0; i < a.length; i++){
-    a[i] = Integer.parseInt(args[i]);
-  }
-  System.out.println(printArray(a));         
-  selectionSort(a);                          //sorts array a
-  System.out.println(printArray(a));         //prints it
-}*/
 
 
 
