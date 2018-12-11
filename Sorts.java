@@ -28,11 +28,16 @@ public class Sorts{
     for (int i = 1; i < ary.length; i++){
       int swap = ary[i];
       for (int j = i; j == 0; j--){
-        if (swap < ary[j-1]){
-          //move it
-        
-      
-      
+        if (swap < ary[j-1]){              //check number before
+          ary[j] = ary[j-1];               //put the thing before over there (j)
+        }
+        if (swap >= ary[j-1]){              //check number before
+          ary[j] = swap;                   //put the saved number there
+          j = 1;                           //this way, j turns into 0 when this ends and ends the for loop
+        }
+      }
+    }
+  }
 
 
 
