@@ -17,16 +17,16 @@ System.out.println(printArray(randish));
 int[] randish2 = Arrays.copyOf(randish,randish.length);
       int[] randish3 = Arrays.copyOf(randish,randish.length);
   
-      Sorts.bubbleSort(randish2);
+      Sorts.insertionSort(randish2);
       Arrays.sort(randish3);
     
     System.out.println(printArray(randish2));   
 System.out.println(printArray(randish3));  
     
      if( Arrays.equals(randish2,randish3)){
-        System.out.println("Bubble Correct!");
+        System.out.println("i Correct!");
       }else{
-       System.out.println("Bubble BROKEN!!!!");
+       System.out.println("i BROKEN!!!!");
       }
 
     

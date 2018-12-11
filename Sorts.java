@@ -37,8 +37,8 @@ public class Sorts{
         if (swap < ary[j-1]){              //check number before
           ary[j] = ary[j-1];               //put the thing before over there (j)
         }
-        if (swap >= ary[j-1]){              //check number before
-          ary[j] = swap;                   //put the saved number there
+        if (j == 1 || swap >= ary[j-1]){                              //check number before
+          ary[j-1] = swap;                   //put the saved number there
           j = 1;                           //this way, j turns into 0 when this ends and ends the for loop
         }
       }
