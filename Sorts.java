@@ -16,7 +16,7 @@ public class Sorts{
   }
 
   public static void bubbleSort(int [] ary){
-    for (int i = 0; i < ary.length-1; i++){
+    for (int i = 0; i < ary.length; i++){
       bubbleSortHelper(ary, i);
     }
   }
