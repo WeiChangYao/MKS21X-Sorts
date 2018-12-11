@@ -15,8 +15,14 @@ public class Sorts{
     }
   }
 
-  public static void bubbleSortHelper(int[] ary){//this is part of the bubble sort
-    for (int j = 0; j < ary.length-1; j++){//goes through array
+  public static void bubbleSort(int [] ary){
+    for (int i = 0; i < ary.length-1; i++){
+      bubbleSortHelper(ary, i);
+    }
+  }
+  
+  public static void bubbleSortHelper(int[] ary, int a){//this is part of the bubble sort
+    for (int j = 0; j < ary.length-1-a; j++){//goes through array AND MINUS A from the for loop before
       if (ary [j] > ary [j+1]){            //to find if something's larger
         int swap = ary[j];                 //saves orignial number
         ary[j] = ary[j+1];                 //puts new number in original's place
