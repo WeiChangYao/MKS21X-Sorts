@@ -16,10 +16,10 @@ public class Sorts{
   }
   
   public static void bubbleSort(int [] ary){
-    int sortNum;
-    for (int i = 0; i < ary.length ; i++){
-      sortNum = 1;
-      for (int j = 0; j < ary.length-1-i && sortNum > 0; j++){//goes through array AND MINUS A from the for loop before
+    int sortNum = 1;
+    for (int i = 0; i < ary.length && sortNum > 0 ; i++){
+      sortNum = 0;
+      for (int j = 0; j < ary.length-1-i; j++){//goes through array AND MINUS A from the for loop before
         if (ary [j] > ary [j+1]){            //to find if something's larger
           int swap = ary[j];                 //saves orignial number
           ary[j] = ary[j+1];                 //puts new number in original's place
