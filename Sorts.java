@@ -14,22 +14,23 @@ public class Sorts{
     ary[j] = min;                        //smallest number is in index j
     }
   }
-
-  public static void bubbleSort(int [] ary){
-    for (int i = 0; i < ary.length; i++){
-      bubbleSortHelper(ary, i);
-    }
-  }
   
-  public static void bubbleSortHelper(int[] ary, int a){//this is part of the bubble sort
-    for (int j = 0; j < ary.length-1-a; j++){//goes through array AND MINUS A from the for loop before
-      if (ary [j] > ary [j+1]){            //to find if something's larger
-        int swap = ary[j];                 //saves orignial number
-        ary[j] = ary[j+1];                 //puts new number in original's place
-        ary[j+1] = swap;                   //puts original number in new num's place
+  public static void bubbleSort(int [] ary){
+    //boolean sorted = true;
+    for (int i = 0; i < ary.length ; i++){
+      //sorted = true;
+      for (int j = 0; j < ary.length-1-i; j++){//goes through array AND MINUS A from the for loop before
+        if (ary [j] > ary [j+1]){            //to find if something's larger
+          int swap = ary[j];                 //saves orignial number
+          ary[j] = ary[j+1];                 //puts new number in original's place
+          ary[j+1] = swap;                   //puts original number in new num's place
+         // sorted = true;
+        }
       }
     }
   }
+  
+
   public static void insertionSort(int[] ary){
     for (int i = 1; i < ary.length; i++){
       int swap = ary[i];
