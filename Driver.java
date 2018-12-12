@@ -5,7 +5,7 @@ public class Driver{
 
     int[] randish = new int[Integer.parseInt(artie[0])];
     for(int i = 0 ; i < randish.length; i++){
-      randish[i] =(int)(Math.random()*10000);
+      randish[i] = 0; //(int)(Math.random()*10000);
     }
 
     if(artie[1].equals("selection")){
@@ -32,4 +32,17 @@ public class Driver{
       }
     }
   }
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
 }
