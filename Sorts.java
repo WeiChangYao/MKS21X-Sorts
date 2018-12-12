@@ -16,15 +16,15 @@ public class Sorts{
   }
   
   public static void bubbleSort(int [] ary){
-    //boolean sorted = true;
+    int sortNum;
     for (int i = 0; i < ary.length ; i++){
-      //sorted = true;
-      for (int j = 0; j < ary.length-1-i; j++){//goes through array AND MINUS A from the for loop before
+      sortNum = 1;
+      for (int j = 0; j < ary.length-1-i && sortNum > 0; j++){//goes through array AND MINUS A from the for loop before
         if (ary [j] > ary [j+1]){            //to find if something's larger
           int swap = ary[j];                 //saves orignial number
           ary[j] = ary[j+1];                 //puts new number in original's place
           ary[j+1] = swap;                   //puts original number in new num's place
-         // sorted = true;
+          sortNum++;
         }
       }
     }
