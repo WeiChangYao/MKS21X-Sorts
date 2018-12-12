@@ -16,15 +16,15 @@ public class Sorts{
   }
   
   public static void bubbleSort(int [] ary){
-    int sortNum = 1;
-    for (int i = 0; i < ary.length && sortNum > 0 ; i++){
-      sortNum = 0;
-      for (int j = 0; j < ary.length-1-i; j++){//goes through array AND MINUS A from the for loop before
-        if (ary [j] > ary [j+1]){            //to find if something's larger
+    int sortNum = 1;                         //counts number of times sorted
+    for (int i = 0; i < ary.length && sortNum > 0 ; i++){ //as long as sorted is more than zero, it continues sorting normally
+      sortNum = 0;                           //makes sure to reset sortNum...i fortgot to do that b4...
+      for (int j = 0; j < ary.length-1-i; j++){//goes through array and minus one everytime
+        if (ary [j] > ary [j+1]){            //see's if the thing infront is smaller. Then:
           int swap = ary[j];                 //saves orignial number
           ary[j] = ary[j+1];                 //puts new number in original's place
           ary[j+1] = swap;                   //puts original number in new num's place
-          sortNum++;
+          sortNum++;                         //adds one to sorted because it sorted
         }
       }
     }
@@ -33,9 +33,9 @@ public class Sorts{
 
   public static void insertionSort(int[] ary){
     for (int i = 1; i < ary.length; i++){
-      int swap = ary[i];
+      int swap = ary[i];                   //saves that integer
       for (int j = i; !(j == -1); j--){
-        if (j == 0) {
+        if (j == 0) {                      //once it hits the end, it puts it in
           ary[j] = swap;
         } else{
         if (swap < ary[j-1]){              //check number before
