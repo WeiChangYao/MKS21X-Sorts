@@ -33,14 +33,17 @@ public class Sorts{
   public static void insertionSort(int[] ary){
     for (int i = 1; i < ary.length; i++){
       int swap = ary[i];
-      for (int j = i; j == 0; j--){
+      for (int j = i; !(j == -1); j--){
+        if (j == 0) {
+          ary[j] = swap;
+        } else{
         if (swap < ary[j-1]){              //check number before
           ary[j] = ary[j-1];               //put the thing before over there (j)
         }
-        if (j == 1 || swap >= ary[j-1]){                              //check number before
-          ary[j-1] = swap;                   //put the saved number there
-          j = 1;                           //this way, j turns into 0 when this ends and ends the for loop
-        }
+        else{                              //check number before
+          ary[j] = swap;                   //put the saved number there
+          j = 0;                           //this way, j turns into 0 when this ends and ends the for loop
+        } }
       }
     }
   }
